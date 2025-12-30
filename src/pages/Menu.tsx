@@ -13,7 +13,7 @@ export default function Menu() {
   const sectionRefs = useRef<Record<number, HTMLDivElement | null>>({});
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/menu/")
+    fetch("https://public-menu-backend-1.onrender.com/api/menu/")
       .then(res => res.json())
       .then((data: MenuResponse) => {
         setSections(data.sections);
